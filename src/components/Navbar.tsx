@@ -1,18 +1,10 @@
-// Navbar.tsx
 "use client";
 
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react'; // Icons for the Hamburger and Close button
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
-// import { NAV_LINKS, LOGO_LINKS, NavItem } from './constants'; // Import Nav Data
 import { NAV_LINKS, LOGO_LINKS, NavItem } from '@/types/constants';
-
-// --- Performance and Best Practices ---
-// 1. Time/Space Complexity: O(N) where N is the number of links, mainly for rendering the map, which is efficient.
-// 2. State Management: Uses local state (useState) for simple UI logic (menu open/close).
-// 3. Accessibility: Uses <button> for controls and ARIA attributes for screen readers.
-// 4. Clean Code: Separates data (constants.ts) from presentation (Navbar.tsx).
 
 const NavLink: React.FC<{ item: NavItem, onClick: () => void }> = ({ item, onClick }) => (
   <Link 
@@ -23,7 +15,6 @@ const NavLink: React.FC<{ item: NavItem, onClick: () => void }> = ({ item, onCli
       py-2 md:py-0 px-4 w-full md:w-auto text-center
       border-b md:border-b-0 border-gray-100
     "
-    // Use the primary-teal for hover state, extracted visually
   >
     {item.name}
   </Link>
@@ -32,7 +23,6 @@ const NavLink: React.FC<{ item: NavItem, onClick: () => void }> = ({ item, onCli
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Use useCallback for handler functions for performance and stability
   const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
   const closeMenu = useCallback(() => setIsOpen(false), []);
 
@@ -40,7 +30,6 @@ const Navbar: React.FC = () => {
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
-        {/* LOGOS / TITLE Section - Left Side */}
         <div className="flex items-center space-x-4 lg:space-x-8 h-full">
           {/* Logo 1: 'সমন্বিত শিক্ষা জোট' (Jaksue Logo) */}
           <Link href="/" className="flex items-center">

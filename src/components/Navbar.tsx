@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
 
     return (
         // Apply the CSS variables to the header element
-        <header className="sticky top-0 z-50 bg-white shadow-md" style={navStyle}> 
+        <header className="sticky top-0 z-50 bg-white shadow-md" style={navStyle}>
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
                 {/* LOGOS / TITLE Section - Left Side */}
@@ -60,14 +60,19 @@ const Navbar: React.FC = () => {
                     {/* Logo 2: 'জাকসু নির্বাচন ২০২৫' (Using Primary Teal) */}
                     <Link href="/" className="hidden md:block">
                         {/* Reference using text-[color:var(--primary-teal)] */}
-                        <h1 className="text-xl lg:text-2xl font-bold text-[color:var(--primary-teal)]"> 
+                        <h1 className="text-xl lg:text-2xl font-bold text-[color:var(--primary-teal)]">
                             জাকসু নির্বাচন ২০২৫
                         </h1>
                     </Link>
                 </div>
 
-                {/* ... (Desktop Navigation Links and other parts remain the same) ... */}
-                
+                {/* Desktop Navigation Links */}
+                <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
+                    {NAV_LINKS.map((item) => (
+                        <NavLink key={item.id} item={item} onClick={closeMenu} />
+                    ))}
+                </div>
+
                 {/* Mobile Menu Button (Using Dark Teal) */}
                 <div className="md:hidden">
                     <button
@@ -83,9 +88,9 @@ const Navbar: React.FC = () => {
 
             {/* --- Mobile Sidebar Navigation --- */}
             <div
-                className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'
-                    }`}
-                aria-hidden={!isOpen}
+                className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out md:hidden 
+                ${isOpen ? 'translate-x-0' : 'translate-x-full hidden'}`
+                }
             >
                 {/* Backdrop */}
                 <div
@@ -118,7 +123,7 @@ const Navbar: React.FC = () => {
                     {/* Election Title for Mobile (Using Primary Teal) */}
                     <div className="mt-8 pt-4 border-t border-gray-100">
                         <Link href="/" onClick={closeMenu}>
-                             {/* Reference using text-[color:var(--primary-teal)] */}
+                            {/* Reference using text-[color:var(--primary-teal)] */}
                             <h1 className="text-lg font-bold text-[color:var(--primary-teal)]">
                                 জাকসু নির্বাচন ২০২৫
                             </h1>

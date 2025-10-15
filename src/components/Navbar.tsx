@@ -14,6 +14,7 @@ const DARK_TEAL = '#003B3D';
 const navStyle = {
     '--primary-teal': PRIMARY_TEAL,
     '--dark-teal': DARK_TEAL,
+    fontFamily: '"Hind Siliguri", sans-serif',
 } as React.CSSProperties; // Assert as CSSProperties for TypeScript
 
 const NavLink: React.FC<{ item: NavItem, onClick: () => void }> = ({ item, onClick }) => (
@@ -35,6 +36,9 @@ const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
     const closeMenu = useCallback(() => setIsOpen(false), []);
+    const bengaliFontStyle = {
+        fontFamily: '"Hind Siliguri", sans-serif'
+    };
 
     return (
         // Apply the CSS variables to the header element

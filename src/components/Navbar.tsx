@@ -15,13 +15,12 @@ const navStyle = {
     '--primary-teal': PRIMARY_TEAL,
     '--dark-teal': DARK_TEAL,
     fontFamily: '"Hind Siliguri", sans-serif',
-} as React.CSSProperties; // Assert as CSSProperties for TypeScript
+} as React.CSSProperties;
 
 const NavLink: React.FC<{ item: NavItem, onClick: () => void }> = ({ item, onClick }) => (
     <Link
         href={item.href}
         onClick={onClick}
-        // 2. Reference the CSS Variables using arbitrary values
         className={`
             text-lg font-medium text-[color:var(--dark-teal)] hover:text-[color:var(--primary-teal)] transition-colors 
             py-2 md:py-0 px-4 w-full md:w-auto text-center
@@ -36,12 +35,8 @@ const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
     const closeMenu = useCallback(() => setIsOpen(false), []);
-    const bengaliFontStyle = {
-        fontFamily: '"Hind Siliguri", sans-serif'
-    };
 
     return (
-        // Apply the CSS variables to the header element
         <header className="sticky top-0 z-50 bg-white shadow-md" style={navStyle}>
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 

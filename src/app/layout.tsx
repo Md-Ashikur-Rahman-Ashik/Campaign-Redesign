@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hind_Siliguri } from 'next/font/google';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const bengaliFont = Hind_Siliguri({
   subsets: ['bengali'],
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bengaliFont.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

@@ -21,7 +21,7 @@ const IssueCard: React.FC<{ issue: Issue }> = ({ issue }) => {
             <div className="flex flex-col justify-between h-full">
 
                 <div className="flex items-center mt-auto">
-                    <div className="relative h-96 w-96 overflow-hidden">
+                    <div className="relative md:h-96 md:w-96 h-80 w-80 overflow-hidden">
                         <Image
                             src={imageUrl}
                             alt="logo"

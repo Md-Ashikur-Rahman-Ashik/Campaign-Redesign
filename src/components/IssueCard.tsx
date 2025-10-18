@@ -6,7 +6,7 @@ import { ISSUE_DATA, Issue } from '@/types/issues';
 // const COLOR_ACCENT_YELLOW = '#f8c057';
 
 const IssueCard: React.FC<{ issue: Issue }> = ({ issue }) => {
-    const {link, imageUrl } = issue;
+    const { link, imageUrl } = issue;
 
     return (
         <Link
@@ -28,7 +28,7 @@ const IssueCard: React.FC<{ issue: Issue }> = ({ issue }) => {
                             fill
                             sizes="32px"
                             className="object-cover"
-                            quality={100}
+                            unoptimized={true}
                         />
                     </div>
                 </div>

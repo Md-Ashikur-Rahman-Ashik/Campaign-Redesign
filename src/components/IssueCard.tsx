@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ISSUE_DATA, Issue } from '@/types/issues';
 
-const COLOR_DARK_GREEN = '#00331a';
-const COLOR_ACCENT_YELLOW = '#f8c057';
+// const COLOR_DARK_GREEN = '#00331a';
+// const COLOR_ACCENT_YELLOW = '#f8c057';
 
 const IssueCard: React.FC<{ issue: Issue }> = ({ issue }) => {
     const {link, imageUrl } = issue;

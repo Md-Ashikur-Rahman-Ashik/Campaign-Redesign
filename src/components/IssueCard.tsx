@@ -24,7 +24,7 @@ const IssueCard: React.FC<{ issue: Issue }> = ({ issue }) => {
                     <div className="relative h-96 w-96 overflow-hidden">
                         <Image
                             src={imageUrl}
-                            alt="সমাজতান্ত্রিক ছাত্রফ্রন্ট logo"
+                            alt="logo"
                             fill
                             sizes="32px"
                             className="object-cover"

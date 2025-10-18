@@ -28,6 +28,7 @@ const IssueCard: React.FC<{ issue: Issue }> = ({ issue }) => {
                             fill
                             sizes="32px"
                             className="object-cover"
+                            quality={100}
                         />
                     </div>
                 </div>

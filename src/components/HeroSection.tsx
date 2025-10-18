@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HeroSection: React.FC<{}> = () => {
+const HeroSection: React.FC = () => {
     const title: string = "আমাদের ইশতেহার";
     const subtitle: string =
         "জাহাঙ্গীরনগর বিশ্ববিদ্যালয় কেন্দ্রীয় ছাত্র সংসদ (জাকসু) - ২০২৫ নির্বাচনের জন্য সমন্বিত শিক্ষার্থী জোটের নির্বাচনী ইশতেহার।";
@@ -11,8 +11,8 @@ const HeroSection: React.FC<{}> = () => {
     };
 
     // const handleDownloadClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    //     e.preventDefault();
-    //     console.log("Download button clicked (UI-only).");
+    //     e.preventDefault();
+    //     console.log("Download button clicked (UI-only).");
     // };
 
     return (

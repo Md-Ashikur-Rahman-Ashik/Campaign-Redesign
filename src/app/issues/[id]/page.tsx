@@ -4,6 +4,11 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ISSUE_DATA, Issue } from '@/types/issues'; 
+import { FaFacebookSquare } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+import { BsLinkedin } from 'react-icons/bs';
+import { IoLogoWhatsapp } from 'react-icons/io';
+import { MdMarkEmailRead } from 'react-icons/md';
 
 // Define the colors
 const COLOR_DARK_GREEN = '#00331a';
@@ -97,17 +102,17 @@ const IssueDetailsPage: React.FC = () => {
 
       {/* Footer/Social Sharing Bar (Fixed to the bottom) */}
       <div 
-        className={`fixed bottom-0 w-full bg-white shadow-2xl z-10 
-        p-3 sm:p-4 border-t border-gray-200 flex flex-col sm:flex-row 
-        justify-end items-center`}
+        className={`fixed bottom-0 w-full shadow-2xl z-10 
+        p-3 sm:p-4 flex flex-col sm:flex-row 
+        justify-center items-center`}
       >
         {/* Social Icons - centered on the bottom */}
-        <div className="flex space-x-4 text-2xl text-gray-500">
-          <button onClick={() => shareLink('facebook', currentUrl, shareTitle)} className="hover:text-blue-600 transition-colors" aria-label="Share on Facebook">F</button>
-          <button onClick={() => shareLink('twitter', currentUrl, shareTitle)} className="hover:text-sky-400 transition-colors" aria-label="Share on X (Twitter)">T</button>
-          <button onClick={() => shareLink('linkedin', currentUrl, shareTitle)} className="hover:text-blue-700 transition-colors" aria-label="Share on LinkedIn">L</button>
-          <button onClick={() => shareLink('whatsapp', currentUrl, shareTitle)} className="hover:text-green-500 transition-colors" aria-label="Share on WhatsApp">W</button>
-          <button onClick={() => shareLink('email', currentUrl, shareTitle)} className="hover:text-gray-900 transition-colors" aria-label="Share via Email">@</button>
+        <div className="flex space-x-4 text-2xl text-white">
+          <button onClick={() => shareLink('facebook', currentUrl, shareTitle)} className="hover:text-green-500 transition-colors" aria-label="Share on Facebook"><FaFacebookSquare /></button>
+          <button onClick={() => shareLink('twitter', currentUrl, shareTitle)} className="hover:text-green-500 transition-colors" aria-label="Share on X (Twitter)"><FaSquareXTwitter /></button>
+          <button onClick={() => shareLink('linkedin', currentUrl, shareTitle)} className="hover:text-green-500 transition-colors" aria-label="Share on LinkedIn"><BsLinkedin /></button>
+          <button onClick={() => shareLink('whatsapp', currentUrl, shareTitle)} className="hover:text-green-500 transition-colors" aria-label="Share on WhatsApp"><IoLogoWhatsapp /></button>
+          <button onClick={() => shareLink('email', currentUrl, shareTitle)} className="hover:text-green-500 transition-colors" aria-label="Share via Email"><MdMarkEmailRead /></button>
         </div>
       </div>
     </div>

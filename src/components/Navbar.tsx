@@ -2,34 +2,43 @@
 
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; 
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { NAV_LINKS, LOGO_LINKS, NavItem } from '@/types/constants';
 
-// Define the colors as constants
 const PRIMARY_TEAL = '#00918D';
 const DARK_TEAL = '#003B3D';
 
-// 1. Set the CSS Variables in the root element (or a parent)
 const navStyle = {
     '--primary-teal': PRIMARY_TEAL,
     '--dark-teal': DARK_TEAL,
     fontFamily: '"Hind Siliguri", sans-serif',
 } as React.CSSProperties;
 
-const NavLink: React.FC<{ item: NavItem, onClick: () => void }> = ({ item, onClick }) => (
-    <Link
-        href={item.href}
-        onClick={onClick}
-        className={`
-            text-lg font-medium text-[color:var(--dark-teal)] hover:text-[color:var(--primary-teal)] transition-colors 
-            py-2 md:py-0 px-4 w-full md:w-auto text-center
-            border-b md:border-b-0 border-gray-100
-        `}
-    >
-        {item.name}
-    </Link>
-);
+const NavLink: React.FC<{ item: NavItem, onClick: () => void }> = ({ item, onClick }) => {
+    const pathname = usePathname();
+    const isActive = pathname === item.href;
+
+    const activeClasses = isActive 
+        ? 'font-bold text-[color:var(--primary-teal)]'
+        : 'font-medium text-[color:var(--dark-teal)] hover:text-[color:var(--primary-teal)]';
+
+    return (
+        <Link
+            href={item.href}
+            onClick={onClick}
+            className={`
+                text-lg transition-colors 
+                py-2 md:py-0 px-4 w-full md:w-auto text-center
+                border-b md:border-b-0 border-gray-100
+                ${activeClasses}
+            `}
+        >
+            {item.name}
+        </Link>
+    );
+};
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +67,6 @@ const Navbar: React.FC = () => {
 
                     {/* Logo 2: 'জাকসু নির্বাচন ২০২৫' (Using Primary Teal) */}
                     <Link href="/" className="hidden md:block">
-                        {/* Reference using text-[color:var(--primary-teal)] */}
                         <h1 className="text-xl lg:text-2xl font-bold text-[color:var(--primary-teal)]">
                             জাকসু নির্বাচন ২০২৫
                         </h1>
@@ -77,10 +85,9 @@ const Navbar: React.FC = () => {
                     <button
                         onClick={toggleMenu}
                         aria-label="Toggle navigation menu"
-                        // Reference using text-[color:var(--dark-teal)]
                         className="p-2 text-[color:var(--dark-teal)] hover:text-[color:var(--primary-teal)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary-teal)] rounded-md"
                     >
-                        <Menu className="w-6 h-6" />
+                        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
                 </div>
             </nav>
@@ -88,7 +95,7 @@ const Navbar: React.FC = () => {
             {/* --- Mobile Sidebar Navigation --- */}
             <div
                 className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out md:hidden 
-                ${isOpen ? 'translate-x-0' : 'translate-x-full hidden'}`
+                ${isOpen ? 'translate-x-0' : 'translate-x-full'}` // Removed 'hidden' from the inactive state to allow the transition to work
                 }
             >
                 {/* Backdrop */}
@@ -105,7 +112,6 @@ const Navbar: React.FC = () => {
                         <button
                             onClick={closeMenu}
                             aria-label="Close navigation menu"
-                            // Reference using text-[color:var(--dark-teal)]
                             className="p-2 text-[color:var(--dark-teal)] hover:text-[color:var(--primary-teal)] focus:outline-none focus:ring-2 focus:ring-[color:var(--primary-teal)] rounded-md"
                         >
                             <X className="w-6 h-6" />
@@ -122,7 +128,6 @@ const Navbar: React.FC = () => {
                     {/* Election Title for Mobile (Using Primary Teal) */}
                     <div className="mt-8 pt-4 border-t border-gray-100">
                         <Link href="/" onClick={closeMenu}>
-                            {/* Reference using text-[color:var(--primary-teal)] */}
                             <h1 className="text-lg font-bold text-[color:var(--primary-teal)]">
                                 জাকসু নির্বাচন ২০২৫
                             </h1>

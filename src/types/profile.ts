@@ -12,6 +12,6 @@ export const candidateData: ProfileData = {
   description:
     "কাজী দিন মোহাম্মদ একজন সমাজসেবক ও ইসলামী মূল্যবোধে অনুপ্রাণিত নেতা। যিনি ন্যায়, সেবা ও মানবিক উন্নয়নকে তাঁর রাজনৈতিক দর্শনের কেন্দ্রবিন্দুতে রেখেছেন।",
   buttonLink: "#about",
-  imageUrl: "https://i.ibb.co/bVZRWV7/Candidate-Image.png",
+  imageUrl: "https://i.ibb.co/0jgrC74C/Candidate-Profile.png",
   imageAlt: "A portrait of the candidate",
 };

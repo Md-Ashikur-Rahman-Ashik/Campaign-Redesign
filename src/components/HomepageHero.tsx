@@ -1,9 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 
+const navStyle = {
+    fontFamily: '"Hind Siliguri", sans-serif',
+} as React.CSSProperties;
+
 const HomepageHero: React.FC = () => {
     return (
-        <section className="relative w-full overflow-hidden rounded-lg mt-2 py-16 md:py-20 lg:py-24 xl:py-28">
+        <section className="relative w-full overflow-hidden rounded-lg mt-2 py-16 md:py-20 lg:py-24 xl:py-28" style={navStyle}>
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 h-full w-full">
                     <Image

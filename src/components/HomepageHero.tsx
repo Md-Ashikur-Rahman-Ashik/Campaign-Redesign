@@ -7,7 +7,7 @@ const HomepageHero: React.FC = () => {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 h-full w-full">
                     <Image
-                        src="https://i.ibb.co/TDfFFhLB/DemoImg.png"
+                        src="https://i.ibb.co/Qj7dcWFb/DemoImg.png"
                         alt="A person in modest attire standing, representing a brighter future"
                         fill
                         priority

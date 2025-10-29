@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
                         <div className='relative w-12 h-12 md:w-16 md:h-16'>
                             <Image
                                 src={LOGO_LINKS.jaksue}
-                                alt="সমন্বিত শিক্ষা জোট লোগো"
+                                alt="Organization Logo"
                                 fill
                                 className="object-contain"
                                 sizes="(max-width: 768px) 48px, 64px"
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                     {/* Logo 2: 'জাকসু নির্বাচন ২০২৫' (Using Primary Teal) */}
                     <Link href="/" className="hidden md:block">
                         <h1 className="text-xl lg:text-2xl font-bold text-[color:var(--primary-teal)]">
-                            জাকসু নির্বাচন ২০২৫
+                            কুমিল্লা-৬ আসনের প্রার্থী
                         </h1>
                     </Link>
                 </div>

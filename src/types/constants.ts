@@ -13,6 +13,6 @@ export const NAV_LINKS: NavItem[] = [
 
 
 export const LOGO_LINKS = {
-  jaksue: 'https://i.ibb.co/jZy1vR3r/Logo.png',
+  jaksue: 'https://i.ibb.co/N2yn6Fws/03.jpg',
   election: '/images/election_title.png',
 };

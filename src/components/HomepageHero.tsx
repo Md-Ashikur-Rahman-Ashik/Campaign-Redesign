@@ -16,6 +16,7 @@ const HomepageHero: React.FC = () => {
                         fill
                         priority
                         className="object-cover object-center md:object-[center_30%]"
+                        unoptimized={true}
                     />
                 </div>
 

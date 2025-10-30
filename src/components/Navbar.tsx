@@ -65,7 +65,6 @@ const Navbar: React.FC = () => {
                         </div>
                     </Link>
 
-                    {/* Logo 2: 'জাকসু নির্বাচন ২০২৫' (Using Primary Teal) */}
                     <Link href="/" className="hidden md:block">
                         <h1 className="text-xl lg:text-2xl font-bold text-[color:var(--primary-teal)]">
                             কুমিল্লা-৬ আসনের প্রার্থী
@@ -128,8 +127,8 @@ const Navbar: React.FC = () => {
                     {/* Election Title for Mobile (Using Primary Teal) */}
                     <div className="mt-8 pt-4 border-t border-gray-100">
                         <Link href="/" onClick={closeMenu}>
-                            <h1 className="text-lg font-bold text-[color:var(--primary-teal)]">
-                                জাকসু নির্বাচন ২০২৫
+                            <h1 className="text-lg text-center font-bold text-[color:var(--primary-teal)]">
+                                কুমিল্লা-৬ আসনের প্রার্থী
                             </h1>
                         </Link>
                     </div>

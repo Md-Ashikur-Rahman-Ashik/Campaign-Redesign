@@ -155,7 +155,7 @@ const FeedbackForm: React.FC = () => {
           type="submit"
           disabled={state.isSubmitting}
           style={accentStyle}
-          className={`w-full md:w-1/4 text-center block mx-auto py-3 rounded-lg font-bold text-lg tracking-wider transition duration-300 ease-in-out 
+          className={`w-full sm:w-1/2 lg:w-1/5 text-center block mx-auto py-3 rounded-lg font-bold text-lg tracking-wider transition duration-300 ease-in-out 
                      ${ACCENT_TEXT_COLOR} 
                      ${
                        state.isSubmitting

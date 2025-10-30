@@ -29,11 +29,12 @@ const CandidateProfile: React.FC<CandidateProfileProps> = ({ data }) => {
                                 fill
                                 className="rounded-2xl object-cover shadow-lg"
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                unoptimized={true}
                             />
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-start text-center md:text-left">
+                    <div className="flex flex-col md:items-start text-center md:text-left">
                         <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
                             {title}
                         </h2>

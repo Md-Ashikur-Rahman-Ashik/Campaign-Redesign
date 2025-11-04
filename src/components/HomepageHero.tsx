@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const navStyle = {
     fontFamily: '"Hind Siliguri", sans-serif',
@@ -10,18 +10,18 @@ const HomepageHero: React.FC = () => {
         <section className="relative w-full overflow-hidden rounded-lg mt-2 py-16 md:py-20 lg:py-24 xl:py-28" style={navStyle}>
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 h-full w-full">
-                    <Image
+                    {/* <Image
                         src="https://i.ibb.co/Qj7dcWFb/DemoImg.png"
                         alt="A person in modest attire standing, representing a brighter future"
                         fill
                         priority
                         className="object-cover object-center md:object-[center_30%]"
                         unoptimized={true}
-                    />
+                    /> */}
                 </div>
 
 
-                <div className="absolute inset-0 bg-[#1A4C4F] opacity-60"></div>
+                <div className="absolute inset-0 bg-[#00331a]"></div>
             </div>
 
 

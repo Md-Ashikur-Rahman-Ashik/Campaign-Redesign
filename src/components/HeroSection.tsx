@@ -3,7 +3,7 @@ import React from 'react';
 const HeroSection: React.FC = () => {
     const title: string = "আমাদের ইশতেহার";
     const subtitle: string =
-        "জাহাঙ্গীরনগর বিশ্ববিদ্যালয় কেন্দ্রীয় ছাত্র সংসদ (জাকসু) - ২০২৫ নির্বাচনের জন্য সমন্বিত শিক্ষার্থী জোটের নির্বাচনী ইশতেহার।";
+        "কাজী দিন মোহাম্মদ - কুমিল্লা-৬ প্রার্থী - ২০২৬ নির্বাচনের জন্য নির্বাচনী ইশতেহার।";
     const buttonText: string = "সম্পূর্ণ ইশতেহার ডাউনলোড";
 
     const bengaliFontStyle = {

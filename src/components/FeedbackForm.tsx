@@ -44,7 +44,7 @@ const FeedbackForm: React.FC = () => {
         setState((prevState) => ({
           ...prevState,
           status: "error",
-          statusMessage: "Please enter your feedback before submitting.",
+          statusMessage: "আমাদের কাছে আপনার প্রত্যাশা কি?",
         }));
         return;
       }
@@ -56,7 +56,6 @@ const FeedbackForm: React.FC = () => {
       }));
 
       try {
-        // NOTE: Replace '/api/submit' with your actual Vercel endpoint if different
         const response = await fetch("/api/submit", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -69,12 +68,12 @@ const FeedbackForm: React.FC = () => {
             isSubmitting: false,
             status: "success",
             statusMessage:
-              "Thank you! Your feedback has been successfully recorded.",
+              "জাজাক আল্লাহ খায়রান। আপনার প্রত্যাশা নিয়ে আমাদের কাজ চলমান থাকবে, ইন শা আল্লাহ।",
           });
         } else {
           const errorData = await response.json();
           throw new Error(
-            errorData.error || "Submission failed. Please try again."
+            errorData.error || "দুঃখিত। পুনরায় চেষ্টা করুন।"
           );
         }
       } catch (error) {
@@ -86,7 +85,7 @@ const FeedbackForm: React.FC = () => {
           statusMessage:
             error instanceof Error
               ? error.message
-              : "An unexpected error occurred.",
+              : "দুঃখিত। একটি কারিগরি ত্রুটি হয়েছে।",
         }));
       }
     },
@@ -140,7 +139,7 @@ const FeedbackForm: React.FC = () => {
         {/* Status Message */}
         {state.status !== "idle" && state.statusMessage && (
           <p
-            className={`text-sm mb-4 p-3 rounded-lg ${
+            className={`text-sm text-center mb-4 p-3 rounded-lg ${
               state.status === "success"
                 ? "bg-green-50 text-green-700"
                 : "bg-red-50 text-red-700"

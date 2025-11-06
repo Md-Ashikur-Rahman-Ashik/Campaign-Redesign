@@ -5,7 +5,7 @@ export default function Manifesto() {
     return (
         <>
             <HeroSection />
-            <IssueCardGrid />
+            {/* <IssueCardGrid /> */}
         </>
     );
 }

@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
 
                 {/* LOGOS / TITLE Section - Left Side */}
                 <div className="flex items-center space-x-4 lg:space-x-8 h-full">
-                    {/* Logo 1: 'সমন্বিত শিক্ষা জোট' */}
+                    {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <div className='relative w-12 h-12 md:w-16 md:h-16'>
                             <Image

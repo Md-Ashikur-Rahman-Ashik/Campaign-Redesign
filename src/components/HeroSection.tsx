@@ -1,38 +1,43 @@
-import React from 'react';
+import React from "react";
 
 const HeroSection: React.FC = () => {
-    const title: string = "আমাদের ইশতেহার";
-    const subtitle: string =
-        "কাজী দিন মোহাম্মদ - কুমিল্লা-৬ প্রার্থী - ২০২৬ নির্বাচনের জন্য নির্বাচনী ইশতেহার।";
-    const buttonText: string = "সম্পূর্ণ ইশতেহার ডাউনলোড";
+  const title: string = "আমাদের ইশতেহার";
+  const subtitle: string =
+    "কাজী দিন মোহাম্মদ - কুমিল্লা-৬ প্রার্থী - ২০২৬ নির্বাচনের জন্য নির্বাচনী ইশতেহার শীঘ্রই প্রকাশ করা হবে";
+  const buttonText: string = "সম্পূর্ণ ইশতেহার ডাউনলোড";
 
-    const bengaliFontStyle = {
-        fontFamily: '"Hind Siliguri", sans-serif'
-    };
+  const bengaliFontStyle = {
+    fontFamily: '"Hind Siliguri", sans-serif',
+  };
 
-    // const handleDownloadClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    //     e.preventDefault();
-    //     console.log("Download button clicked (UI-only).");
-    // };
+  // const handleDownloadClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  //     e.preventDefault();
+  //     console.log("Download button clicked (UI-only).");
+  // };
 
-    return (
-        <section className="bg-[#00331a] py-16 md:py-24 text-white" style={bengaliFontStyle}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
-                    <h1
-                        className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4"
-                    >
-                        {title}
-                    </h1>
+  return (
+    <section
+      className="bg-[#00331a] py-16 md:py-24 text-white"
+      style={bengaliFontStyle}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+            {title}
+          </h1>
 
-                    <p
-                        className="mt-4 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto opacity-90"
-                    >
-                        {subtitle}
-                    </p>
-                </div>
+          <p className="mt-4 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto opacity-90">
+            {subtitle}
+          </p>
+        </div>
 
-                <div className="mt-10 flex justify-center">
+        <div className="text-center">
+          <p className="mt-4 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto opacity-90">
+            নির্বাচনী ইশতেহারে আপনাদের প্রত্যাশা আমাদের জানাতে পারেন
+          </p>
+        </div>
+
+        {/* <div className="mt-10 flex justify-center">
                     <button
                         // onClick={handleDownloadClick}
                         type="button"
@@ -46,10 +51,10 @@ const HeroSection: React.FC = () => {
                     >
                         {buttonText}
                     </button>
-                </div>
-            </div>
-        </section>
-    );
+                </div> */}
+      </div>
+    </section>
+  );
 };
 
 export default HeroSection;

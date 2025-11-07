@@ -16,28 +16,29 @@ const HeroSection: React.FC = () => {
   // };
 
   return (
-    <section
-      className="bg-[#00331a] py-16 md:py-24 text-white"
-      style={bengaliFontStyle}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
-            {title}
-          </h1>
+    <div className="container mx-auto">
+      <section
+        className="bg-[#00331a] rounded-lg py-16 md:py-24 text-white"
+        style={bengaliFontStyle}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+              {title}
+            </h1>
 
-          <p className="mt-4 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto opacity-90">
-            {subtitle}
-          </p>
-        </div>
+            <p className="mt-4 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto opacity-90">
+              {subtitle}
+            </p>
+          </div>
 
-        <div className="text-center">
-          <p className="mt-4 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto opacity-90">
-            নির্বাচনী ইশতেহারে আপনাদের প্রত্যাশা আমাদের জানাতে পারেন
-          </p>
-        </div>
+          <div className="text-center">
+            <p className="mt-4 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto opacity-90">
+              নির্বাচনী ইশতেহারে আপনাদের প্রত্যাশা আমাদের জানাতে পারেন
+            </p>
+          </div>
 
-        {/* <div className="mt-10 flex justify-center">
+          {/* <div className="mt-10 flex justify-center">
                     <button
                         // onClick={handleDownloadClick}
                         type="button"
@@ -52,8 +53,9 @@ const HeroSection: React.FC = () => {
                         {buttonText}
                     </button>
                 </div> */}
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 };
 

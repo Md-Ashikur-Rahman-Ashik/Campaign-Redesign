@@ -65,8 +65,8 @@ const Navbar: React.FC = () => {
                         </div>
                     </Link>
 
-                    <Link href="/" className="hidden md:block">
-                        <h1 className="text-xl lg:text-2xl font-bold text-[color:var(--primary-teal)]">
+                    <Link href="/" className="md:block">
+                        <h1 className="text-base md:text-lg lg:text-2xl font-bold text-[color:var(--primary-teal)]">
                             আল্লাহর আইন চাই, সৎ লোকের শাসন চাই
                         </h1>
                     </Link>

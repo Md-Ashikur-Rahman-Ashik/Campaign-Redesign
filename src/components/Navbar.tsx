@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
 
                     <Link href="/" className="hidden md:block">
                         <h1 className="text-xl lg:text-2xl font-bold text-[color:var(--primary-teal)]">
-                            কুমিল্লা-৬ আসনের প্রার্থী
+                            আল্লাহর আইন চাই, সৎ লোকের শাসন চাই
                         </h1>
                     </Link>
                 </div>

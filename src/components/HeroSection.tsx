@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
   // };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-10">
       <section
         className="bg-[#00331a] rounded-lg py-16 md:py-24 text-white"
         style={bengaliFontStyle}

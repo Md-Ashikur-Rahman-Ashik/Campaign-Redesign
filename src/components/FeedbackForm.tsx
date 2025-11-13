@@ -98,7 +98,7 @@ const FeedbackForm: React.FC = () => {
     <div className="container mx-auto md:mt-10 p-4 sm:p-6 lg:p-8" style={navStyle}>
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-xl rounded-lg p-6 border border-gray-100"
+        className="bg-white p-6"
       >
         <h2
           className="text-2xl text-center font-semibold mb-4"

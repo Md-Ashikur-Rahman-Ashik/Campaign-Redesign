@@ -7,16 +7,16 @@ const navStyle = {
 
 const HomepageHero: React.FC = () => {
     return (
-        <section className="container mx-auto rounded-lg mt-2" style={navStyle}>
+        <section className="container mx-auto mt-2" style={navStyle}>
             <div className="flex flex-col items-center justify-center text-center">
-                <div className="w-full h-full mb-8 rounded-lg">
+                <div className="w-full h-full mb-8">
                     <Image
                         src="https://i.ibb.co/vvzwJmFB/Profile-1.jpg"
                         alt="A person in modest attire standing, representing a brighter future"
                         width={100}
                         height={100}
                         priority
-                        className="object-bottom w-full h-full"
+                        className="w-full h-full rounded-lg"
                         unoptimized={true}
                     />
                 </div>
